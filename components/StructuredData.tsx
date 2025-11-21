@@ -40,10 +40,20 @@ export default function StructuredData() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Under Eye & Hooded Eyelids CO2 Laser",
-            "description": "Precision CO2 laser treatment for delicate eye area"
+            "name": "Single Area CO2 Laser Treatment",
+            "description": "Targeted CO2 laser treatment for specific facial areas"
           },
-          "price": "199",
+          "price": "100",
+          "priceCurrency": "GBP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "3 Areas CO2 Laser Treatment",
+            "description": "CO2 laser treatment for three targeted facial areas"
+          },
+          "price": "250",
           "priceCurrency": "GBP"
         },
         {
@@ -238,10 +248,17 @@ export default function StructuredData() {
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "Under Eye & Hooded Eyelids CO2 Laser",
-          "price": "199",
+          "name": "Single Area CO2 Laser Treatment",
+          "price": "100",
           "priceCurrency": "GBP",
-          "description": "Precision CO2 laser treatment for delicate eye area"
+          "description": "Targeted CO2 laser treatment for specific facial areas"
+        },
+        {
+          "@type": "Offer",
+          "name": "3 Areas CO2 Laser Treatment",
+          "price": "250",
+          "priceCurrency": "GBP",
+          "description": "CO2 laser treatment for three targeted facial areas"
         },
         {
           "@type": "Offer",

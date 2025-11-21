@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface VideoModalProps {
   isOpen: boolean
@@ -8,9 +8,21 @@ interface VideoModalProps {
 }
 
 export default function VideoModal({ isOpen, onClose }: VideoModalProps) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
+
+      // Explicitly play video on mobile (user-initiated action)
+      if (videoRef.current) {
+        const playPromise = videoRef.current.play()
+        if (playPromise !== undefined) {
+          playPromise.catch(error => {
+            console.log('Video autoplay prevented:', error)
+          })
+        }
+      }
     } else {
       document.body.style.overflow = 'unset'
     }
@@ -56,9 +68,9 @@ export default function VideoModal({ isOpen, onClose }: VideoModalProps) {
         {/* Video Player */}
         <div className="relative w-full h-full bg-black flex items-center justify-center">
           <video
+            ref={videoRef}
             className="w-full h-full object-contain"
             controls
-            autoPlay
             playsInline
           >
             <source src="https://storage.googleapis.com/msgsndr/yE0ZTtTwqOwpiUubrP0k/media/692060705bc0572ebffa9fc6.mp4" type="video/mp4" />

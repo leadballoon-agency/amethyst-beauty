@@ -30,10 +30,10 @@ export default function PremiumTreatments({ onBookingClick }: PremiumTreatmentsP
     },
     {
       icon: '💎',
-      title: 'Custom Areas',
-      description: 'Targeted treatment for specific areas',
-      features: ['Under eyes & eyelids', 'Neck & décolletage', 'Expert consultation', 'Flexible scheduling'],
-      price: 'From £199',
+      title: 'Single Area Treatment',
+      description: 'Targeted CO2 laser for specific areas',
+      features: ['Choose your area', 'Under eyes, cheeks, etc.', '£100 per area', '3 areas for £250'],
+      price: 'From £100',
       gradient: 'from-green-400 to-emerald-600',
       popular: false
     }
