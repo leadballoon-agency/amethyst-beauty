@@ -22,10 +22,9 @@ export default function PremiumHero({ onBookingClick, onVideoClick }: PremiumHer
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4 sm:space-y-6 lg:space-y-8 animate-slide-up text-center lg:text-left">
-            {/* Premium Badge */}
-            <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-primary-100 rounded-full mx-auto lg:mx-0">
-              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse mr-2"></span>
-              <span className="text-primary-700 font-medium text-xs sm:text-sm">Advanced CO2 Laser Treatment</span>
+            {/* BLACK FRIDAY Badge */}
+            <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-red-500 to-red-600 rounded-full mx-auto lg:mx-0 shadow-lg animate-pulse">
+              <span className="text-white font-bold text-sm sm:text-base">⚡ BLACK FRIDAY ⚡</span>
             </div>
 
             {/* Main Heading */}
@@ -35,8 +34,25 @@ export default function PremiumHero({ onBookingClick, onVideoClick }: PremiumHer
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-neutral-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              The gold standard treatment for acne scars, wrinkles, and skin texture. Expert care by Nurse Elanda and Prescriber Mavra at Eskeen Clinic, London.
+              Celebrity endorsed CO2 RF Laser delivers amazing results without surgery. Stimulates collagen for firmer, tighter skin. Say goodbye to lines, wrinkles, sun spots, scarring and sagging skin!
             </p>
+
+            {/* BLACK FRIDAY Offer Box */}
+            <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-500 rounded-2xl p-4 sm:p-6 mx-auto lg:mx-0 max-w-xl">
+              <p className="text-red-600 font-bold text-sm sm:text-base mb-2">BLACK FRIDAY SPECIAL - Ends This Month!</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <p className="text-3xl sm:text-4xl font-bold text-red-600">£395</p>
+                  <p className="text-sm text-neutral-600">1 Treatment</p>
+                </div>
+                <div className="text-center bg-red-600 rounded-xl py-2">
+                  <p className="text-3xl sm:text-4xl font-bold text-white">£800</p>
+                  <p className="text-sm text-white font-medium">3 Treatments</p>
+                  <p className="text-xs text-red-100">SAVE £385!</p>
+                </div>
+              </div>
+              <p className="text-xs text-neutral-600 mt-3 text-center">Pay Monthly with Klarna • 3-5 Days Downtime</p>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">

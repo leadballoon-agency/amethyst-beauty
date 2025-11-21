@@ -1,5 +1,5 @@
 {
-  "name": "eskeen-clinic-co2-laser",
+  "name": "amethyst-aesthetics-co2-laser",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "CO2 Laser Treatment Landing Page for Eskeen Clinic",
+  "description": "CO2 Laser Treatment Landing Page for Amethyst Aesthetics Beauty",
   "dependencies": {
     "next": "^15.5.0",
     "react": "^19.1.1",

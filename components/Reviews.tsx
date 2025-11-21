@@ -14,51 +14,51 @@ interface Review {
 export default function Reviews() {
   const reviews: Review[] = [
     {
-      name: "Maria B.",
+      name: "Margaret Thresher",
       rating: 5,
-      date: "2024-10-28",
+      date: "2024-11-19",
+      treatment: "Ongoing Treatments",
+      text: "I have been going to Marianne for over a year. She is very friendly and makes me feel very relaxed, she is very professional and does a brilliant job.",
+      verified: true
+    },
+    {
+      name: "Holly Henderson",
+      rating: 5,
+      date: "2023-12-21",
+      treatment: "Multiple Treatments",
+      text: "I've had many treatments with Marianne, all of which have been done to an extremely high standard and I've left feeling more confident in myself everytime. Marianne is kind, caring and an amazing listener. It's like having my lips done and therapy all at the same time. Wouldn't go anywhere else, she's one of a kind!",
+      verified: true
+    },
+    {
+      name: "Joanna Bowers",
+      rating: 5,
+      date: "2023-12-21",
+      treatment: "Aesthetic Treatments",
+      text: "Marianne is the best i would never go elsewhere, highly recommended and well worth the travel. She is kind, caring and attentive she gives you back confidence and uplift she makes you feel welcome on every visit never short on making you feel special.",
+      verified: true
+    },
+    {
+      name: "Sheena Wye",
+      rating: 5,
+      date: "2024-07-21",
+      treatment: "Aesthetic Services",
+      text: "Wouldn't go anywhere else for my aesthetics this company has helped me find a new love for myself! One thing I pride them in if she don't think it's for you she will say and suggest alternatives! Amazing friendly service.",
+      verified: true
+    },
+    {
+      name: "Shannon Reason",
+      rating: 5,
+      date: "2022-11-21",
+      treatment: "Lip Treatment",
+      text: "I went to Marianne to get my lips done for the first time. I was really scared I have a phobia of needles. Marianne assured me I'd be fine. She was super patient with me, kept checking in with me while my numbing stuff was on. She explained everything clearly and made the whole experience comfortable.",
+      verified: true
+    },
+    {
+      name: "Tracey Groves",
+      rating: 5,
+      date: "2022-11-21",
       treatment: "Aesthetic Treatment",
-      text: "I honestly can't recommend Elanda enough! She's truly the best at what she does. She has so much experience, knowledge, and passion for her work. What makes her stand out is how she really listens and tailors everything perfectly to your needs.",
-      verified: true
-    },
-    {
-      name: "Zoyyah I.",
-      rating: 5,
-      date: "2024-09-15",
-      treatment: "PRP for Acne Scars",
-      text: "I've struggled with insecurity related to acne scars for years, and PRP has finally made a real difference! The clinic team - particularly Mavra was professional, I was super nervous and she took the time to explain the process and put me at ease.",
-      verified: true
-    },
-    {
-      name: "Inês R.",
-      rating: 5,
-      date: "2024-09-20",
-      treatment: "PRP Treatment",
-      text: "I had PRP for the hyperpigmentation on my skin from Mavra and just 2 sessions in, I can already see a huge difference! Mavra explained the process thoroughly and made me feel so comfortable she was gentle, informative, and really took her time.",
-      verified: true
-    },
-    {
-      name: "Olivia B.",
-      rating: 5,
-      date: "2024-10-25",
-      treatment: "Consultation",
-      text: "Elanda is an exceptionally knowledgeable practitioner as well as being a nurse she is very patient through her consultations and will always explain everything to you and there is no pressure to have anything done that she doesn't feel is right for you.",
-      verified: true
-    },
-    {
-      name: "Eva C.",
-      rating: 5,
-      date: "2024-09-18",
-      treatment: "PRP Sessions",
-      text: "I've been seeing Elanda at Eskeen Clinic for a course of PRP sessions and I couldn't be happier with the results! She's incredibly knowledgeable, professional, and really takes the time to explain everything so I feel informed and comfortable.",
-      verified: true
-    },
-    {
-      name: "Ljiljana P.",
-      rating: 5,
-      date: "2024-09-22",
-      treatment: "Skin Treatment",
-      text: "What an incredible young lady Elanda is! Knowledgable, polite, professional, explains everything to a detail. Shows all the products and labels. Done the job precisely and with care. Much better priced services than anywhere else too. Highly recommend!",
+      text: "Marianne is superb. She provides extensive knowledge of the treatment you are having, explaining everything including aftercare which in turn puts you at ease. She goes above and beyond to ensure your treatment is provided under the highest standard.",
       verified: true
     }
   ]
@@ -82,8 +82,8 @@ export default function Reviews() {
                 </svg>
               ))}
             </div>
-            <p className="text-2xl sm:text-3xl font-bold text-neutral-900">5.0</p>
-            <p className="text-sm sm:text-base text-neutral-600 mt-1">Based on {reviews.length} verified reviews</p>
+            <p className="text-2xl sm:text-3xl font-bold text-neutral-900">4.9</p>
+            <p className="text-sm sm:text-base text-neutral-600 mt-1">Based on 25+ verified reviews</p>
           </div>
         </div>
 
@@ -153,7 +153,7 @@ export default function Reviews() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm text-neutral-600">5.0 rating</span>
+                <span className="text-sm text-neutral-600">4.9 rating</span>
               </div>
             </div>
           </div>

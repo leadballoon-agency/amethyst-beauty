@@ -1,29 +1,33 @@
 export default function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Eskeen Clinic",
-    "alternateName": "Eskeen Clinic London",
-    "url": "https://co2london.com",
+    "@type": "BeautySalon",
+    "name": "Amethyst Aesthetics Beauty",
+    "alternateName": "Amethyst Aesthetics",
+    "url": "https://co2lasersomerset.co.uk",
     "sameAs": [
-      "https://co2london.com"
+      "https://co2lasersomerset.co.uk",
+      "https://www.amethystaestheticsbeauty.com/"
     ],
-    "logo": "https://co2london.com/images/logo.png",
-    "image": "https://co2london.com/images/co2laser-skin-rejeuvenation.jpeg",
-    "description": "Expert CO2 laser treatment clinic in London led by Elanda RN and Prescriber Mavra, specializing in acne scar treatment, wrinkle reduction, skin texture improvement, and anti-aging treatments.",
+    "logo": "https://co2lasersomerset.co.uk/images/logo.png",
+    "image": "https://co2lasersomerset.co.uk/images/co2laser-skin-rejeuvenation.jpeg",
+    "description": "Award-finalist beauty salon in Somerset specializing in expert CO2 laser treatments led by Marianne. Over 800+ treatments completed. Acne scar treatment, wrinkle reduction, and skin rejuvenation.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "London",
-      "addressRegion": "Greater London",
+      "streetAddress": "Unit 2, Old Apple Store, New Cross Hill",
+      "addressLocality": "South Petherton",
+      "addressRegion": "Somerset",
+      "postalCode": "TA13 5HV",
       "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "51.5074",
-      "longitude": "-0.1278"
+      "latitude": "50.9581",
+      "longitude": "-2.8169"
     },
-    "telephone": "+44 7846888649",
-    "priceRange": "£££",
+    "telephone": "+447366904007",
+    "email": "Ismaymarianne@gmail.com",
+    "priceRange": "££",
     "openingHours": [
       "Mo-Fr 09:00-18:00",
       "Sa 09:00-17:00"
@@ -35,32 +39,34 @@ export default function StructuredData() {
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Single CO2 Laser Session",
-            "description": "Professional fractional CO2 laser treatment for skin resurfacing"
+            "@type": "Service",
+            "name": "Under Eye & Hooded Eyelids CO2 Laser",
+            "description": "Precision CO2 laser treatment for delicate eye area"
+          },
+          "price": "199",
+          "priceCurrency": "GBP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Full Face CO2 Laser - BLACK FRIDAY",
+            "description": "Comprehensive facial CO2 laser resurfacing for acne scars, wrinkles, and skin rejuvenation. BLACK FRIDAY Special!"
           },
           "price": "395",
-          "priceCurrency": "GBP"
+          "priceCurrency": "GBP",
+          "priceValidUntil": "2024-11-30"
         },
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "CO2 Laser 3 Session Package",
-            "description": "Comprehensive package for acne scars, wrinkles, and skin rejuvenation - Save £335"
+            "@type": "Service",
+            "name": "3 Treatment Package - BLACK FRIDAY",
+            "description": "Best value! Three full face CO2 laser treatments. Save £385!"
           },
-          "price": "850",
-          "priceCurrency": "GBP"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "PRP Enhancement Add-on",
-            "description": "Platelet Rich Plasma therapy add-on for enhanced healing and results"
-          },
-          "price": "100",
-          "priceCurrency": "GBP"
+          "price": "800",
+          "priceCurrency": "GBP",
+          "priceValidUntil": "2024-11-30"
         }
       ]
     },
@@ -71,29 +77,29 @@ export default function StructuredData() {
     ],
     "availableService": [
       {
-        "@type": "MedicalProcedure",
+        "@type": "Service",
         "name": "CO2 Laser Skin Resurfacing",
         "description": "Fractional CO2 laser treatment for acne scars, wrinkles, and skin rejuvenation"
       },
       {
-        "@type": "MedicalProcedure",
-        "name": "PRP Therapy",
-        "description": "Platelet Rich Plasma therapy for enhanced healing and skin regeneration"
-      },
-      {
-        "@type": "MedicalProcedure",
+        "@type": "Service",
         "name": "Acne Scar Treatment",
         "description": "Specialized CO2 laser treatment for acne scar reduction"
       },
       {
-        "@type": "MedicalProcedure",
+        "@type": "Service",
         "name": "Pigmentation Treatment",
         "description": "Laser treatment for sun damage and pigmentation removal"
       },
       {
-        "@type": "MedicalProcedure",
-        "name": "Stretch Mark Reduction",
-        "description": "CO2 laser treatment for stretch mark improvement"
+        "@type": "Service",
+        "name": "Under Eye Tightening",
+        "description": "CO2 laser treatment for under eye area tightening"
+      },
+      {
+        "@type": "Service",
+        "name": "Hooded Eyelid Treatment",
+        "description": "CO2 laser treatment for hooded eyelids"
       }
     ]
   }
@@ -101,45 +107,45 @@ export default function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Eskeen Clinic CO2 Laser",
-    "alternateName": "CO2 Laser London",
-    "url": "https://co2london.com",
-    "description": "Expert CO2 laser treatment for acne scars, wrinkles, skin texture & pigmentation in London by Elanda RN",
+    "name": "Amethyst Aesthetics Beauty - CO2 Laser Somerset",
+    "alternateName": "CO2 Laser Somerset",
+    "url": "https://co2lasersomerset.co.uk",
+    "description": "Expert CO2 laser treatment for acne scars, wrinkles, skin texture & pigmentation in Somerset by award-winning practitioner Marianne",
     "publisher": {
       "@type": "Organization",
-      "name": "Eskeen Clinic"
+      "name": "Amethyst Aesthetics Beauty"
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://co2london.com/?s={search_term_string}",
+      "target": "https://co2lasersomerset.co.uk/?s={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Eskeen Clinic",
-    "alternateName": "CO2 Laser London",
-    "image": "https://co2london.com/images/clinic/inside1.webp",
-    "description": "Expert CO2 laser treatment clinic in Putney, London. Specializing in acne scar treatment, wrinkle reduction, skin resurfacing, and pigmentation removal with our highly qualified medical team.",
+    "@type": "BeautySalon",
+    "name": "Amethyst Aesthetics Beauty",
+    "alternateName": "CO2 Laser Somerset",
+    "image": "https://co2lasersomerset.co.uk/images/amethyst-clinic.avif",
+    "description": "Award-finalist beauty salon in South Petherton, Somerset. Specializing in CO2 laser treatments for acne scar treatment, wrinkle reduction, skin resurfacing, and pigmentation removal. Led by Marianne with 800+ treatments completed.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "115 Lower Richmond Road",
-      "addressLocality": "Putney",
-      "addressRegion": "London",
-      "postalCode": "SW15 1EX",
+      "streetAddress": "Unit 2, Old Apple Store, New Cross Hill",
+      "addressLocality": "South Petherton",
+      "addressRegion": "Somerset",
+      "postalCode": "TA13 5HV",
       "addressCountry": "GB"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "51.4598",
-      "longitude": "-0.2166"
+      "latitude": "50.9581",
+      "longitude": "-2.8169"
     },
-    "url": "https://co2london.com",
-    "telephone": "+447846888649",
-    "email": "info@eskeen.co.uk",
-    "priceRange": "££-£££",
+    "url": "https://co2lasersomerset.co.uk",
+    "telephone": "+447366904007",
+    "email": "Ismaymarianne@gmail.com",
+    "priceRange": "££",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -154,35 +160,35 @@ export default function StructuredData() {
         "closes": "17:00"
       }
     ],
-    "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Clearpay"],
+    "paymentAccepted": ["Cash", "Credit Card", "Debit Card"],
     "currenciesAccepted": "GBP",
     "areaServed": [
       {
         "@type": "City",
-        "name": "London"
+        "name": "South Petherton"
       },
       {
         "@type": "City",
-        "name": "Putney"
+        "name": "Yeovil"
       },
       {
         "@type": "City",
-        "name": "Wimbledon"
+        "name": "Crewkerne"
       },
       {
         "@type": "City",
-        "name": "Richmond"
+        "name": "Ilminster"
       },
       {
         "@type": "City",
-        "name": "Chelsea"
+        "name": "Chard"
       },
       {
         "@type": "City",
-        "name": "Fulham"
+        "name": "Taunton"
       }
     ],
-    "hasMap": "https://maps.google.com/?q=115+Lower+Richmond+Road,+Putney,+London+SW15+1EX",
+    "hasMap": "https://maps.google.com/?q=Unit+2,+Old+Apple+Store,+New+Cross+Hill,+South+Petherton,+TA13+5HV",
     "medicalSpecialty": [
       "Dermatology",
       "Aesthetic Medicine",
@@ -193,64 +199,65 @@ export default function StructuredData() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "CO2 Laser Treatment London",
-    "description": "Expert fractional CO2 laser treatment for acne scars, wrinkles, skin texture, and pigmentation led by Prescriber Mavra",
+    "name": "CO2 Laser Treatment Somerset",
+    "description": "Expert fractional CO2 laser treatment for acne scars, wrinkles, skin texture, and pigmentation led by award-finalist practitioner Marianne",
     "provider": {
-      "@type": "MedicalBusiness",
-      "name": "Eskeen Clinic",
+      "@type": "BeautySalon",
+      "name": "Amethyst Aesthetics Beauty",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "115 Lower Richmond Road",
-        "addressLocality": "Putney",
-        "addressRegion": "London",
-        "postalCode": "SW15 1EX",
+        "streetAddress": "Unit 2, Old Apple Store, New Cross Hill",
+        "addressLocality": "South Petherton",
+        "addressRegion": "Somerset",
+        "postalCode": "TA13 5HV",
         "addressCountry": "GB"
       },
-      "telephone": "+447846888649"
+      "telephone": "+447366904007"
     },
     "areaServed": [
-      "London",
-      "Putney",
-      "Wimbledon",
-      "Richmond",
-      "Westminster",
-      "Camden",
-      "Islington",
-      "Kensington",
-      "Chelsea",
-      "Fulham",
-      "Hammersmith",
-      "Greater London"
+      "South Petherton",
+      "Yeovil",
+      "Crewkerne",
+      "Ilminster",
+      "Chard",
+      "Taunton",
+      "Martock",
+      "Langport",
+      "Somerton",
+      "Somerset"
     ],
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": "https://co2london.com",
-      "serviceSmsNumber": "+447846888649"
+      "serviceUrl": "https://co2lasersomerset.co.uk",
+      "serviceSmsNumber": "+447366904007"
     },
-    "category": "Medical Treatment",
+    "category": "Beauty Treatment",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "CO2 Laser Treatment Packages",
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "Single CO2 Laser Session",
+          "name": "Under Eye & Hooded Eyelids CO2 Laser",
+          "price": "199",
+          "priceCurrency": "GBP",
+          "description": "Precision CO2 laser treatment for delicate eye area"
+        },
+        {
+          "@type": "Offer",
+          "name": "Full Face CO2 Laser - BLACK FRIDAY",
           "price": "395",
-          "priceCurrency": "GBP"
+          "priceCurrency": "GBP",
+          "priceValidUntil": "2024-11-30",
+          "description": "Comprehensive facial CO2 laser resurfacing for acne scars, wrinkles, and skin rejuvenation. BLACK FRIDAY Special!"
         },
         {
           "@type": "Offer",
-          "name": "CO2 Laser 3 Session Package",
-          "price": "850",
+          "name": "3 Treatment Package - BLACK FRIDAY",
+          "price": "800",
           "priceCurrency": "GBP",
-          "description": "Save £335 - Comprehensive package for acne scars, wrinkles, and skin rejuvenation"
-        },
-        {
-          "@type": "Offer",
-          "name": "PRP Enhancement Add-on",
-          "price": "100",
-          "priceCurrency": "GBP",
-          "description": "Platelet Rich Plasma therapy add-on per session"
+          "priceValidUntil": "2024-11-30",
+          "description": "Best value! Three full face CO2 laser treatments. Save £385!"
         }
       ]
     }
@@ -258,24 +265,24 @@ export default function StructuredData() {
 
   const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Eskeen Clinic",
+    "@type": "BeautySalon",
+    "name": "Amethyst Aesthetics Beauty",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "6",
+      "ratingValue": "4.9",
+      "reviewCount": "25",
       "bestRating": "5",
-      "worstRating": "5"
+      "worstRating": "1"
     },
     "review": [
       {
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Maria B."
+          "name": "Margaret Thresher"
         },
-        "datePublished": "2024-10-28",
-        "reviewBody": "I honestly can't recommend Elanda enough! She's truly the best at what she does. She has so much experience, knowledge, and passion for her work. What makes her stand out is how she really listens and tailors everything perfectly to your needs.",
+        "datePublished": "2024-11-19",
+        "reviewBody": "I have been going to Marianne for over a year. She is very friendly and makes me feel very relaxed, she is very professional and does a brilliant job.",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
@@ -286,10 +293,10 @@ export default function StructuredData() {
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Zoyyah I."
+          "name": "Holly Henderson"
         },
-        "datePublished": "2024-09-15",
-        "reviewBody": "I've struggled with insecurity related to acne scars for years, and PRP has finally made a real difference! The clinic team - particularly Mavra was professional, I was super nervous and she took the time to explain the process and put me at ease.",
+        "datePublished": "2023-12-21",
+        "reviewBody": "I've had many treatments with Marianne, all of which have been done to an extremely high standard and I've left feeling more confident in myself everytime. Marianne is kind, caring and an amazing listener. It's like having my lips done and therapy all at the same time. Wouldn't go anywhere else, she's one of a kind!",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
@@ -300,10 +307,10 @@ export default function StructuredData() {
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Inês R."
+          "name": "Joanna Bowers"
         },
-        "datePublished": "2024-09-20",
-        "reviewBody": "I had PRP for the hyperpigmentation on my skin from Mavra and just 2 sessions in, I can already see a huge difference! Mavra explained the process thoroughly and made me feel so comfortable she was gentle, informative, and really took her time.",
+        "datePublished": "2023-12-21",
+        "reviewBody": "Marianne is the best i would never go elsewhere, highly recommended and well worth the travel. She is kind, caring and attentive she gives you back confidence and uplift she makes you feel welcome on every visit never short on making you feel special.",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
@@ -314,10 +321,10 @@ export default function StructuredData() {
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Olivia B."
+          "name": "Sheena Wye"
         },
-        "datePublished": "2024-10-25",
-        "reviewBody": "Elanda is an exceptionally knowledgeable practitioner as well as being a nurse she is very patient through her consultations and will always explain everything to you and there is no pressure to have anything done that she doesn't feel is right for you.",
+        "datePublished": "2024-07-21",
+        "reviewBody": "Wouldn't go anywhere else for my aesthetics this company has helped me find a new love for myself! One thing I pride them in if she don't think it's for you she will say and suggest alternatives! Amazing friendly service.",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
@@ -328,10 +335,10 @@ export default function StructuredData() {
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Eva C."
+          "name": "Shannon Reason"
         },
-        "datePublished": "2024-09-18",
-        "reviewBody": "I've been seeing Elanda at Eskeen Clinic for a course of PRP sessions and I couldn't be happier with the results! She's incredibly knowledgeable, professional, and really takes the time to explain everything so I feel informed and comfortable.",
+        "datePublished": "2022-11-21",
+        "reviewBody": "I went to Marianne to get my lips done for the first time. I was really scared I have a phobia of needles. Marianne assured me I'd be fine. She was super patient with me, kept checking in with me while my numbing stuff was on. She explained everything clearly and made the whole experience comfortable.",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
@@ -342,10 +349,10 @@ export default function StructuredData() {
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Ljiljana P."
+          "name": "Tracey Groves"
         },
-        "datePublished": "2024-09-22",
-        "reviewBody": "What an incredible young lady Elanda is! Knowledgable, polite, professional, explains everything to a detail. Shows all the products and labels. Done the job precisely and with care. Much better priced services than anywhere else too. Highly recommend!",
+        "datePublished": "2022-11-21",
+        "reviewBody": "Marianne is superb. She provides extensive knowledge of the treatment you are having, explaining everything including aftercare which in turn puts you at ease. She goes above and beyond to ensure your treatment is provided under the highest standard.",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",

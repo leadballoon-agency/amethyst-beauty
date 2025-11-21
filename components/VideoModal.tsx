@@ -61,7 +61,7 @@ export default function VideoModal({ isOpen, onClose }: VideoModalProps) {
             autoPlay
             playsInline
           >
-            <source src="https://storage.googleapis.com/msgsndr/USJbaW3fRzevnqAcsm2W/media/691d9f2688e1e62bfb802755.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/msgsndr/yE0ZTtTwqOwpiUubrP0k/media/692060705bc0572ebffa9fc6.mp4" type="video/mp4" />
             <p className="text-white text-center p-4">
               Your browser doesn't support video playback.
             </p>

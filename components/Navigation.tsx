@@ -33,9 +33,9 @@ export default function Navigation({ onBookingClick }: NavigationProps) {
         <div className="flex justify-between items-center">
           <a href="/" className="flex items-center">
             <img
-              src="/images/eskeeen-logo-final-1024x449.png"
-              alt="Eskeen Clinic"
-              className="h-12 w-auto logo-greek-blue"
+              src="/images/amethyst-logo.avif"
+              alt="Amethyst Aesthetics Beauty"
+              className="h-12 w-auto"
             />
           </a>
 

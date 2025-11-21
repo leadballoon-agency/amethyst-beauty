@@ -7,26 +7,26 @@ import StructuredData from '@/components/StructuredData'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CO2 Laser Treatment London - Expert Skin Resurfacing | Eskeen Clinic',
-  description: 'Transform your skin with CO2 laser treatment at Eskeen Clinic London. Gold standard treatment for acne scars, wrinkles & skin texture. 70-80% scar reduction. Expert care from Elanda RN & Prescriber Mavra.',
-  keywords: 'CO2 laser London, acne scar treatment London, laser skin resurfacing, CO2 laser treatment, pigmentation treatment, wrinkle treatment, Eskeen Clinic, Elanda RN, Prescriber Mavra, London aesthetics, laser resurfacing UK, CO2 laser acne scars, fractional laser London',
-  authors: [{ name: 'Eskeen Clinic' }],
-  creator: 'Eskeen Clinic',
-  publisher: 'Eskeen Clinic',
+  title: 'BLACK FRIDAY: CO2 Laser Treatment Somerset £395 - Expert Skin Resurfacing | Amethyst Aesthetics Beauty',
+  description: 'BLACK FRIDAY SPECIAL! Transform your skin with CO2 laser treatment at Amethyst Aesthetics Beauty, South Petherton. £395 for 1 treatment or £800 for 3 (Save £385!). Celebrity endorsed, gold standard treatment for acne scars, wrinkles & skin texture. Award-finalist clinic with 800+ treatments. Klarna available.',
+  keywords: 'CO2 laser Somerset, Black Friday CO2 laser, acne scar treatment Somerset, laser skin resurfacing, CO2 laser treatment, pigmentation treatment, wrinkle treatment, Amethyst Aesthetics Beauty, Marianne aesthetics, South Petherton aesthetics, Somerset aesthetics, laser resurfacing UK, CO2 laser acne scars, fractional laser Somerset, Yeovil aesthetics, CO2 laser deals',
+  authors: [{ name: 'Amethyst Aesthetics Beauty' }],
+  creator: 'Amethyst Aesthetics Beauty',
+  publisher: 'Amethyst Aesthetics Beauty',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://co2london.com'),
+  metadataBase: new URL('https://co2lasersomerset.co.uk'),
   alternates: {
-    canonical: 'https://co2london.com',
+    canonical: 'https://co2lasersomerset.co.uk',
   },
   openGraph: {
-    title: 'CO2 Laser Treatment London - Expert Skin Resurfacing | Eskeen Clinic',
-    description: 'Transform your skin with CO2 laser treatment at Eskeen Clinic London. Gold standard treatment for acne scars, wrinkles & skin texture. 70-80% scar reduction.',
-    url: 'https://co2london.com',
-    siteName: 'Eskeen Clinic CO2 Laser London',
+    title: 'BLACK FRIDAY: CO2 Laser Treatment Somerset £395 - Save £385 on 3 Treatments | Amethyst Aesthetics Beauty',
+    description: 'BLACK FRIDAY SPECIAL! Celebrity endorsed CO2 laser treatment. £395 for 1 treatment or £800 for 3 (Save £385!). Gold standard treatment for acne scars, wrinkles & skin texture. Award-finalist Somerset clinic with 800+ treatments. Klarna available.',
+    url: 'https://co2lasersomerset.co.uk',
+    siteName: 'Amethyst Aesthetics Beauty - CO2 Laser Somerset',
     type: 'website',
     locale: 'en_GB',
     images: [
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
         url: '/images/co2laser-skin-rejeuvenation.jpeg',
         width: 1200,
         height: 675,
-        alt: 'CO2 Laser Skin Resurfacing Before and After Results - Eskeen Clinic London',
+        alt: 'BLACK FRIDAY - CO2 Laser Skin Resurfacing Before and After Results - Amethyst Aesthetics Beauty Somerset',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CO2 Laser Treatment London | Eskeen Clinic',
-    description: 'Transform your skin with CO2 laser treatment. Gold standard treatment for acne scars, wrinkles & skin texture. 70-80% scar reduction.',
+    title: 'BLACK FRIDAY: CO2 Laser Treatment Somerset £395 | Amethyst Aesthetics Beauty',
+    description: 'BLACK FRIDAY SPECIAL! Celebrity endorsed CO2 laser. £395 for 1 treatment or £800 for 3 (Save £385!). Gold standard treatment for acne scars & wrinkles. Klarna available.',
     images: ['/images/co2laser-skin-rejeuvenation.jpeg'],
   },
   robots: {
@@ -59,10 +59,10 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
   other: {
-    'geo.region': 'GB-LND',
-    'geo.placename': 'Putney',
-    'geo.position': '51.4597;-0.2159',
-    'ICBM': '51.4597, -0.2159',
+    'geo.region': 'GB-SOM',
+    'geo.placename': 'South Petherton',
+    'geo.position': '50.9581;-2.8169',
+    'ICBM': '50.9581, -2.8169',
   },
 }
 
@@ -74,7 +74,9 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <body className={inter.className}>
-        {/* Meta Pixel Code - Next.js Script component for proper execution */}
+        {/* Meta Pixel Code - Awaiting Facebook Pixel ID from client */}
+        {/* TODO: Add Facebook Pixel ID when provided by Marianne */}
+        {/*
         <Script
           id="facebook-pixel"
           strategy="afterInteractive"
@@ -88,7 +90,7 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '463566641956136');
+              fbq('init', 'YOUR_PIXEL_ID_HERE');
               fbq('track', 'PageView');
             `,
           }}
@@ -98,9 +100,10 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=463566641956136&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"
           />
         </noscript>
+        */}
 
         <StructuredData />
         {children}

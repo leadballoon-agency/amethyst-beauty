@@ -5,27 +5,16 @@ interface AboutSectionProps {
 export default function AboutSection({ onBookingClick }: AboutSectionProps) {
   const practitioners = [
     {
-      name: 'Elanda RN',
-      title: 'Advanced Aesthetics Practitioner',
-      image: '/images/team/Elanda.jpg',
-      bio: 'With 9 years of experience in the medical industry, I bring expertise from Greece to London\'s aesthetic scene. Having spent the past 5 years refining my skills in one of the best and most highly rated clinics in London, I specialise in advanced CO2 laser treatments for acne scars, wrinkles, and skin rejuvenation. Together with Mavra, we provide comprehensive care at Eskeen Clinic.',
+      name: 'Marianne',
+      title: 'Founder & Advanced Aesthetics Practitioner',
+      image: '/images/team/Marianne.png',
+      bio: 'As the founder of Amethyst Aesthetics Beauty, I bring over 4 years of dedicated expertise in advanced aesthetic treatments. With 800+ successful treatments completed, I specialise in CO2 laser skin resurfacing, acne scar treatment, and anti-ageing procedures. Our clinic has been recognised as a finalist for Best Beauty Salon in Yeovil, reflecting our commitment to exceptional care and outstanding results for every client.',
       qualifications: [
         'Advanced CO2 Laser Specialist',
         'Acne Scar Treatment Expert',
-        'Skin Resurfacing Procedures',
-        '9+ Years Medical Experience'
-      ]
-    },
-    {
-      name: 'Mavra',
-      title: 'Advanced Aesthetician & Pharmacist Practitioner',
-      image: '/images/team/Mavra.jpg',
-      bio: 'Advanced Aesthetician for the last 9 years with a highly qualified medical background. I specialise in Botox and Dermal fillers, anti-ageing treatments, and skin rejuvenation using the latest techniques and technologies. Together with Elanda, we provide comprehensive CO2 laser care at Eskeen Clinic.',
-      qualifications: [
-        '9 Years Aesthetic Medicine Experience',
-        'Pharmacist Practitioner',
-        'Anti-Aging Treatment Specialist',
-        'Advanced Skincare Techniques'
+        '800+ Successful Treatments',
+        'Award-Finalist Beauty Salon',
+        '4+ Years Aesthetic Medicine'
       ]
     }
   ]
@@ -34,17 +23,17 @@ export default function AboutSection({ onBookingClick }: AboutSectionProps) {
     <section id="about" className="py-12 sm:py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto section-padding">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">Meet Your Expert Practitioners</span>
+          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">Meet Your Expert Practitioner</span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-4">
-            Partnership in
-            <span className="block gradient-text">Excellence</span>
+            Your Journey to
+            <span className="block gradient-text">Beautiful Skin</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-neutral-600 mt-2 sm:mt-4 max-w-2xl mx-auto px-4">
-            Two highly skilled practitioners dedicated to your aesthetic journey
+            Award-winning expertise dedicated to your aesthetic transformation
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="max-w-2xl mx-auto">
           {practitioners.map((practitioner, index) => (
             <div key={index} className="bg-gradient-to-br from-white to-primary-50/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-premium hover:shadow-premium-lg transition-all duration-300">
               {/* Practitioner Image */}

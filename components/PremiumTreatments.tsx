@@ -8,28 +8,32 @@ export default function PremiumTreatments({ onBookingClick }: PremiumTreatmentsP
   const treatments = [
     {
       icon: '✨',
-      title: 'Single Session',
-      description: "Individual CO2 laser treatment",
-      features: ['Full face treatment', '5-7 days downtime', '60-90 minutes', 'Immediate results'],
+      title: 'Single Treatment',
+      description: 'BLACK FRIDAY - One full treatment',
+      features: ['Full face CO2 laser', 'Acne scars & wrinkles', '3-5 days downtime', 'Klarna available'],
       price: '£395',
-      gradient: 'from-blue-400 to-cyan-600',
-      popular: false
+      oldPrice: '£499',
+      gradient: 'from-primary-400 to-primary-600',
+      popular: false,
+      badge: 'BLACK FRIDAY'
+    },
+    {
+      icon: '🔥',
+      title: '3 Treatments Package',
+      description: 'BLACK FRIDAY - Best value deal',
+      features: ['3 full face treatments', 'Maximum results', 'SAVE £385', 'Klarna available'],
+      price: '£800',
+      oldPrice: '£1,497',
+      gradient: 'from-red-500 to-red-600',
+      popular: true,
+      badge: 'BEST VALUE'
     },
     {
       icon: '💎',
-      title: '3 Session Package',
-      description: 'Complete transformation package',
-      features: ['3 CO2 laser sessions', 'Save £335 total', 'Book within 6 months', 'Best for acne scars'],
-      price: '£850',
-      gradient: 'from-primary-400 to-primary-600',
-      popular: true
-    },
-    {
-      icon: '🔬',
-      title: 'Single + PRP',
-      description: 'CO2 laser with PRP enhancement',
-      features: ['CO2 laser treatment', 'PRP enhancement included', 'Faster healing', 'Enhanced results'],
-      price: '£495',
+      title: 'Custom Areas',
+      description: 'Targeted treatment for specific areas',
+      features: ['Under eyes & eyelids', 'Neck & décolletage', 'Expert consultation', 'Flexible scheduling'],
+      price: 'From £199',
       gradient: 'from-green-400 to-emerald-600',
       popular: false
     }
@@ -57,9 +61,11 @@ export default function PremiumTreatments({ onBookingClick }: PremiumTreatmentsP
                 treatment.popular ? 'shadow-premium-lg sm:scale-105 border-2 border-primary-200' : 'shadow-premium hover:shadow-premium-lg'
               } sm:hover:scale-105`}
             >
-              {treatment.popular && (
-                <div className="absolute -top-2 sm:-top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-3 sm:px-4 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium">
-                  Best Value
+              {treatment.badge && (
+                <div className={`absolute -top-2 sm:-top-3 left-1/2 -translate-x-1/2 ${
+                  treatment.badge === 'BEST VALUE' ? 'bg-gradient-to-r from-primary-500 to-primary-600' : 'bg-gradient-to-r from-red-500 to-red-600'
+                } text-white px-3 sm:px-4 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium`}>
+                  {treatment.badge}
                 </div>
               )}
               
@@ -90,19 +96,21 @@ export default function PremiumTreatments({ onBookingClick }: PremiumTreatmentsP
 
                 <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-neutral-100 mt-auto">
                   <div>
-                    <p className="text-xs text-neutral-500 sm:hidden">From</p>
+                    {treatment.oldPrice && (
+                      <p className="text-xs sm:text-sm text-neutral-400 line-through mb-1">{treatment.oldPrice}</p>
+                    )}
                     <p className="text-xl sm:text-2xl font-bold gradient-text">{treatment.price}</p>
                   </div>
                   <button
                     onClick={() => {
-                      if (treatment.title === '3 Session Package') {
+                      if (treatment.title === 'Full Face') {
                         trackPRPDealView()
                       }
                       onBookingClick?.()
                     }}
                     className={`px-4 sm:px-5 lg:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-to-r ${treatment.gradient} text-white font-medium hover:shadow-lg transition-all duration-300 sm:hover:scale-105 text-sm sm:text-base`}
                   >
-                    Get Started
+                    Book Now
                   </button>
                 </div>
               </div>

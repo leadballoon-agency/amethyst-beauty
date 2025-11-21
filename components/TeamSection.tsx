@@ -108,8 +108,8 @@ export default function TeamSection({ onBookingClick }: TeamSectionProps) {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <span className="text-xl sm:text-2xl">👩‍⚕️</span>
               </div>
-              <h4 className="font-semibold text-sm sm:text-base mb-1 sm:mb-2">Medical Expertise</h4>
-              <p className="text-xs sm:text-sm text-neutral-600">Nurse-led treatments</p>
+              <h4 className="font-semibold text-sm sm:text-base mb-1 sm:mb-2">Expert Practitioner</h4>
+              <p className="text-xs sm:text-sm text-neutral-600">800+ treatments performed</p>
             </div>
             <div>
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">

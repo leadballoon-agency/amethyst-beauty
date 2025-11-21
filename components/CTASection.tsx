@@ -34,11 +34,11 @@ export default function CTASection({ onBookingClick }: CTASectionProps) {
             <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">📞</div>
             <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Call Us</h3>
             <a
-              href="tel:+447846888649"
+              href="tel:+447366904007"
               onClick={trackPhoneClick}
               className="text-white/90 hover:text-white text-sm sm:text-base"
             >
-              +44 7846 888649
+              07366 904007
             </a>
           </div>
           
@@ -54,7 +54,7 @@ export default function CTASection({ onBookingClick }: CTASectionProps) {
             <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">📍</div>
             <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Visit</h3>
             <p className="text-white/90 text-xs sm:text-sm">
-              115 Lower Richmond Rd.<br />Putney, London SW15 1EX<br />United Kingdom
+              Unit 2, Old Apple Store<br />New Cross Hill<br />South Petherton, TA13 5HV
             </p>
           </div>
         </div>
@@ -82,14 +82,14 @@ export default function CTASection({ onBookingClick }: CTASectionProps) {
           <div className="hidden sm:block w-px h-12 bg-white/30"></div>
           
           <div className="text-center">
-            <p className="text-xl sm:text-2xl font-bold mb-0.5 sm:mb-1">RN</p>
-            <p className="text-xs sm:text-sm text-white/80">Nurse-Led</p>
+            <p className="text-xl sm:text-2xl font-bold mb-0.5 sm:mb-1">800+</p>
+            <p className="text-xs sm:text-sm text-white/80">Treatments Completed</p>
           </div>
           
           <div className="hidden sm:block w-px h-12 bg-white/30"></div>
           
           <div className="text-center">
-            <p className="text-xl sm:text-2xl font-bold mb-0.5 sm:mb-1">20+</p>
+            <p className="text-xl sm:text-2xl font-bold mb-0.5 sm:mb-1">4+</p>
             <p className="text-xs sm:text-sm text-white/80">Years Experience</p>
           </div>
         </div>

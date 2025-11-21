@@ -79,12 +79,12 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
             <div className="space-y-4 sm:space-y-6 animate-fade-in">
               <div>
                 <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Book Your Appointment</h3>
-                <p className="text-sm sm:text-base text-neutral-600 mb-4 sm:mb-6">Select your preferred date and time with Nurse Elanda or Prescriber Mavra</p>
+                <p className="text-sm sm:text-base text-neutral-600 mb-4 sm:mb-6">Select your preferred date and time with Marianne</p>
               </div>
 
               <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 min-h-[600px]">
                 <iframe
-                  src="https://link.leadballoon.co.uk/widget/booking/syK16SjNrYdMzEIta7Bb"
+                  src="https://link.leadballoon.co.uk/widget/booking/AJm9IOtnm6BkM18IKNzc"
                   style={{
                     width: '100%',
                     minHeight: '700px',
@@ -93,8 +93,8 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
                     overflow: 'auto'
                   }}
                   scrolling="yes"
-                  id="syK16SjNrYdMzEIta7Bb_1763545884562"
-                  title="Eskeen Clinic Booking Calendar"
+                  id="AJm9IOtnm6BkM18IKNzc_1763735455955"
+                  title="Amethyst Aesthetics Beauty Booking Calendar"
                   sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
                   allow="payment 'src'; fullscreen 'src'"
                   referrerPolicy="strict-origin-when-cross-origin"
@@ -112,7 +112,7 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
               </div>
 
               <a
-                href="tel:+447846888649"
+                href="tel:+447366904007"
                 onClick={trackPhoneClick}
                 className="block w-full bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:shadow-lg group"
               >
@@ -124,7 +124,7 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
                   </div>
                   <div className="text-left">
                     <p className="text-sm sm:text-base font-medium mb-0.5 sm:mb-1">Prefer to speak with us?</p>
-                    <p className="text-xl sm:text-2xl font-bold">+44 7846 888649</p>
+                    <p className="text-xl sm:text-2xl font-bold">07366 904007</p>
                     <p className="text-xs sm:text-sm text-white/90 mt-0.5">Tap to call now</p>
                   </div>
                 </div>

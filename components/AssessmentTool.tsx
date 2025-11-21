@@ -75,32 +75,21 @@ export default function AssessmentTool({ onBookingClick, onAssessmentComplete }:
   }
 
   const getRecommendation = (assessmentAnswers: any = answers) => {
-    // Recommend based on severity and concerns - prioritize PRP for free deal for serious concerns
+    // Recommend based on severity and concerns
     if (assessmentAnswers[1] === 'scars' ||
-        (assessmentAnswers[1] === 'wrinkles' && assessmentAnswers[3] === '50+') ||
-        (assessmentAnswers[1] === 'pigmentation' && assessmentAnswers[3] !== '20-30')) {
+        assessmentAnswers[1] === 'wrinkles' ||
+        assessmentAnswers[1] === 'pigmentation' ||
+        assessmentAnswers[1] === 'stretch-marks') {
       return {
-        treatment: 'PRP For Free Deal',
-        price: '£700',
-        description: 'Best value - 2 sessions for £350 each + FREE PRP enhancement. Save £300 total!'
-      }
-    } else if (assessmentAnswers[1] === 'stretch-marks') {
-      return {
-        treatment: 'PRP For Free Deal',
-        price: '£700',
-        description: 'Recommended for stretch marks - 2 sessions with FREE PRP for optimal results'
-      }
-    } else if (assessmentAnswers[1] === 'pigmentation' || assessmentAnswers[1] === 'wrinkles') {
-      return {
-        treatment: 'Single + PRP',
-        price: '£500',
-        description: 'Single session with PRP enhancement for faster healing and better results'
+        treatment: 'Full Face CO2 Laser - BLACK FRIDAY',
+        price: '£395',
+        description: 'Comprehensive facial CO2 laser resurfacing for acne scars, wrinkles, and skin rejuvenation. BLACK FRIDAY Special - Save £104!'
       }
     } else {
       return {
-        treatment: 'Single Session',
-        price: '£450',
-        description: 'Individual CO2 laser treatment for targeted skin improvement'
+        treatment: 'CO2 Laser Treatment',
+        price: 'From £199',
+        description: 'Targeted CO2 laser treatment for your specific skin concerns'
       }
     }
   }

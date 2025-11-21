@@ -43,7 +43,7 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
       featured: false
     },
     {
-      image: '/images/pigmentation.png',
+      image: '/images/pigmentation2.png',
       title: 'Pigmentation',
       description: 'Even skin tone restoration',
       time: 'Results Vary',
@@ -137,17 +137,17 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
         <div className="mt-8 sm:mt-12">
           <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-premium">
             <img
-              src="/images/clinic/inside1.webp"
-              alt="Eskeen Clinic Interior"
+              src="/images/amethyst-clinic.avif"
+              alt="Amethyst Aesthetics Beauty Clinic Interior"
               className="w-full"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 sm:from-black/60 via-black/40 sm:via-transparent to-transparent flex items-center">
               <div className="p-6 sm:p-8 md:p-12 max-w-full sm:max-w-lg">
                 <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-4">
-                  Welcome to Eskeen Clinic
+                  Welcome to Amethyst Aesthetics Beauty
                 </h3>
                 <p className="text-white/90 text-sm sm:text-base mb-4 sm:mb-6">
-                  Step into our modern, welcoming clinic designed for your comfort and relaxation during your CO2 laser journey.
+                  Step into our award-finalist beauty salon in South Petherton, Somerset, designed for your comfort during your CO2 laser treatment journey.
                 </p>
                 <button
                   onClick={onBookingClick}
@@ -163,8 +163,8 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
         {/* Stats Section - Mobile Optimized */}
         <div className="mt-10 sm:mt-12 lg:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {[
-            { number: '20+', label: 'Years Experience' },
-            { number: 'RN', label: 'Nurse-Led' },
+            { number: '4+', label: 'Years Experience' },
+            { number: '800+', label: 'Treatments Completed' },
             { number: '£395', label: 'Starting From' },
             { number: '5', label: 'Expert Practitioners' }
           ].map((stat, index) => (
