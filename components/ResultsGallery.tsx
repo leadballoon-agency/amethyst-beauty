@@ -136,11 +136,16 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
         {/* Reception Area Section - Mobile Optimized */}
         <div className="mt-8 sm:mt-12">
           <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-premium">
-            <img
-              src="/images/amethyst-clinic.avif"
-              alt="Amethyst Aesthetics Beauty Clinic Interior"
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full"
-            />
+              poster="/images/amethyst-clinic.avif"
+            >
+              <source src="https://storage.googleapis.com/msgsndr/yE0ZTtTwqOwpiUubrP0k/media/692f2825a4526995d93a5156.mp4" type="video/mp4" />
+            </video>
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 sm:from-black/60 via-black/40 sm:via-transparent to-transparent flex items-center">
               <div className="p-6 sm:p-8 md:p-12 max-w-full sm:max-w-lg">
                 <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-4">

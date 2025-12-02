@@ -1,124 +1,80 @@
-# CO2 Laser Landing Page - Claude Instructions
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-CO2 laser treatment landing page built with Next.js 15, TypeScript, and Tailwind CSS. This is a template that can be duplicated and customized for different aesthetic clinics.
 
-## Tech Stack
-- **Framework:** Next.js 15 with App Router
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Deployment:** Vercel
+CO2 laser treatment landing page for Amethyst Aesthetics Beauty. This is a template-based site that can be duplicated for different aesthetic clinics. Built with Next.js 15 App Router, TypeScript, and Tailwind CSS.
 
 ## Development Commands
+
 ```bash
-npm install        # Install dependencies
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run start      # Start production server
+npm run dev        # Start development server (localhost:3000)
+npm run build      # Build for production (run before deploying)
 npm run lint       # Run ESLint
 ```
 
-## MCP Server Configurations
-Available MCP servers for this project:
-- **Notion**: For documentation and process management
-- **Playwright**: For automated testing and screenshots
-- **Context7**: For context management
-- **Firecrawl**: For web scraping and content extraction
+## Architecture
 
-## Project Structure
-```
-/app
-  ├── layout.tsx          # Root layout with SEO metadata
-  ├── page.tsx           # Main page wrapper
-  ├── globals.css        # Global styles
-  └── api/contact/       # Contact form API endpoint
-/components
-  ├── PageWrapper.tsx    # Main page component orchestrator
-  ├── Navigation.tsx     # Header navigation with booking
-  ├── PremiumHero.tsx    # Hero section
-  ├── AboutSection.tsx   # About the clinic
-  ├── TeamSection.tsx    # Team/practitioner info
-  ├── AssessmentTool.tsx # Skin assessment questionnaire
-  ├── PremiumTreatments.tsx # Treatment options
-  ├── ResultsGallery.tsx # Before/after gallery
-  ├── ProcessSection.tsx # Treatment process
-  ├── FAQ.tsx           # Frequently asked questions
-  ├── CTASection.tsx    # Call to action
-  ├── Footer.tsx        # Footer with contact info
-  └── BookingModal.tsx  # Booking form modal
-/public/images/
-  ├── logo.png          # Main logo (navigation)
-  ├── footer.png        # Footer logo
-  ├── home1.jpg         # Hero image
-  ├── beforeafter*.jpg  # Results gallery images
-  └── treatment.jpg     # Treatment images
-```
+### Page Structure
 
-## Customization Checklist
-When creating a new clinic version:
+The site is a single-page landing page with modal overlays:
 
-### 1. Branding & Images
-- [ ] Replace logo.png with new clinic logo
-- [ ] Replace footer.png with new footer logo
-- [ ] Update hero images (home1.jpg, home2.jpg)
-- [ ] Replace before/after gallery images
-- [ ] Update treatment images
+- `app/page.tsx` → renders `PageWrapper` component
+- `components/PageWrapper.tsx` → orchestrates all sections and manages modal state
+- All booking CTAs trigger `BookingModal` with optional assessment data
+- `VideoModal` handles video playback overlay
 
-### 2. Contact Information
-- [ ] components/Footer.tsx - Contact details, address
-- [ ] components/Navigation.tsx - Any contact links
-- [ ] README.md - Contact information
-- [ ] app/layout.tsx - SEO metadata
+### Component Flow
 
-### 3. SEO & Metadata
-- [ ] app/layout.tsx - title, description, keywords
-- [ ] Update business name throughout
-- [ ] Location-specific keywords
+`PageWrapper` manages two key state flows:
+1. **Booking flow**: Any "Book Now" button sets `assessmentData.skipToCalendar = true` and opens `BookingModal`
+2. **Assessment flow**: `AssessmentTool` collects skin data, passes to `BookingModal` via `onAssessmentComplete`
 
-### 4. Content Customization
-- [ ] Business name and description
-- [ ] Team/practitioner information
-- [ ] Location and address
-- [ ] Phone and email
-- [ ] Treatment descriptions
-- [ ] Pricing (if applicable)
-- [ ] FAQ answers
+### Key Components
 
-### 5. Testing
-- [ ] npm run build (ensure builds successfully)
-- [ ] npm run lint (fix any linting issues)
-- [ ] Test all forms and modals
-- [ ] Verify responsive design
-- [ ] Check all links and navigation
+| Component | Purpose |
+|-----------|---------|
+| `PageWrapper.tsx` | Main orchestrator, holds booking/video modal state |
+| `AssessmentTool.tsx` | Multi-step skin assessment questionnaire |
+| `BookingModal.tsx` | Booking form, receives assessment data |
+| `StructuredData.tsx` | JSON-LD schema markup for SEO |
+| `FacebookPixel.tsx` | Meta Pixel tracking |
 
-## Key Files to Customize
+### API Routes
 
-### High Priority (Must Change)
-1. `components/Footer.tsx` - Contact info, business name, logo
-2. `app/layout.tsx` - SEO metadata, business name
-3. `README.md` - Project description, contact info
-4. `/public/images/logo.png` - Main navigation logo
-5. `/public/images/footer.png` - Footer logo
+- `app/api/contact/route.ts` - Contact form POST handler (currently logs only, integrate email service as needed)
 
-### Medium Priority (Should Change)
-1. `components/PremiumHero.tsx` - Hero copy and messaging
-2. `components/AboutSection.tsx` - Business description
-3. `components/TeamSection.tsx` - Practitioner information
-4. Hero and gallery images in `/public/images/`
+### SEO & Tracking
 
-### Low Priority (Optional)
-1. Color scheme in Tailwind config
-2. Component styling adjustments
-3. Additional content sections
+- Metadata in `app/layout.tsx` (title, description, OpenGraph, Twitter cards)
+- `app/sitemap.ts` and `app/robots.ts` for search engines
+- `components/StructuredData.tsx` for LocalBusiness schema
+- Facebook Pixel in `components/FacebookPixel.tsx`
 
-## Domain Setup
-- Update package.json name field
-- Configure Vercel deployment for new domain
-- Update any hardcoded URLs
+## Customization for New Clinics
 
-## Notes
-- All components use TypeScript strict mode
-- Responsive design mobile-first
-- Uses Tailwind CSS custom color palette
-- Form submissions go to /api/contact endpoint
-- Booking modal integrates with assessment tool
+### Must Change
+
+1. `app/layout.tsx` - All metadata, business name, domain URL
+2. `components/Footer.tsx` - Contact details, address, social links
+3. `components/StructuredData.tsx` - Business schema data
+4. `/public/images/` - Logo and all images
+
+### Content Updates
+
+- `PremiumHero.tsx` - Hero messaging and video
+- `AboutSection.tsx` - Clinic description
+- `TeamSection.tsx` - Practitioner info
+- `PremiumTreatments.tsx` - Pricing
+- `FAQ.tsx` - Q&A content
+- `ResultsGallery.tsx` - Before/after images
+
+### Automation Scripts
+
+The repo includes automation for batch clinic deployments:
+- `clinic-automation-agent.js` - Main orchestrator using Firecrawl
+- `quality-assurance-system.js` - 36+ validation checks
+- `deployment-automation.js` - Vercel/Netlify deployment
+
+Run with: `FIRECRAWL_API_KEY=xxx node clinic-automation-agent.js --url https://clinic-site.com`
