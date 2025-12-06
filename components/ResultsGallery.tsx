@@ -9,7 +9,15 @@ interface ResultsGalleryProps {
 export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
-  const results = [
+  const results: Array<{
+    image: string
+    title: string
+    description: string
+    time: string
+    isAvailable: boolean
+    featured: boolean
+    isAward?: boolean
+  }> = [
     {
       image: '/images/co2laser-skin-rejeuvenation.jpeg',
       title: 'Skin Resurfacing',
@@ -51,6 +59,15 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
       featured: false
     },
     {
+      image: '/images/award-finalist-2025.avif',
+      title: 'Award-Winning Excellence',
+      description: 'Marianne - Professional Beauty Awards Finalist 2025',
+      time: 'Recognised',
+      isAvailable: true,
+      featured: false,
+      isAward: true
+    },
+    {
       image: '/images/model-day-tile.svg',
       title: 'Book a Consultation',
       description: 'See your transformation - schedule your free consultation',
@@ -81,17 +98,29 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
               key={index}
               className={`group relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-premium transition-all duration-300 ${
                 result.isAvailable ? 'sm:hover:shadow-premium-lg cursor-pointer' : 'opacity-90 cursor-not-allowed'
-              } ${result.featured ? 'md:col-span-2' : ''}`}
+              } ${result.featured ? 'md:col-span-2' : ''} ${result.isAward ? 'ring-2 ring-amber-400/50' : ''}`}
               onClick={() => result.isAvailable && setSelectedImage(index)}
             >
-              {/* Before/After Label - Only show for available results */}
-              {result.isAvailable && (
+              {/* Before/After Label - Only show for available results, not for awards */}
+              {result.isAvailable && !result.isAward && (
                 <div className="absolute top-2 sm:top-4 left-2 sm:left-4 z-10 flex gap-1.5 sm:gap-2">
                   <span className="bg-white/90 backdrop-blur px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium">
                     Before
                   </span>
                   <span className="bg-primary-500/90 backdrop-blur text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium">
                     After
+                  </span>
+                </div>
+              )}
+
+              {/* Award Badge */}
+              {result.isAward && (
+                <div className="absolute top-2 sm:top-4 left-2 sm:left-4 z-10">
+                  <span className="bg-gradient-to-r from-amber-500 to-yellow-400 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium flex items-center gap-1">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    Award Finalist
                   </span>
                 </div>
               )}
@@ -106,11 +135,11 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
               </div>
 
               {/* Image Container */}
-              <div className={`relative overflow-hidden ${result.featured ? 'aspect-video' : 'aspect-square'}`}>
+              <div className={`relative overflow-hidden ${result.featured ? 'aspect-video' : 'aspect-square'} ${result.isAward ? 'bg-gradient-to-br from-amber-50 to-white flex items-center justify-center' : ''}`}>
                 <img
                   src={result.image}
                   alt={result.title}
-                  className="w-full h-full object-cover sm:group-hover:scale-105 transition-transform duration-500"
+                  className={`${result.isAward ? 'w-1/2 h-auto object-contain' : 'w-full h-full object-cover'} sm:group-hover:scale-105 transition-transform duration-500`}
                 />
                 
                 {/* Gradient Overlay */}
