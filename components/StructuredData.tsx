@@ -60,23 +60,21 @@ export default function StructuredData() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Full Face CO2 Laser - BLACK FRIDAY",
-            "description": "Comprehensive facial CO2 laser resurfacing for acne scars, wrinkles, and skin rejuvenation. BLACK FRIDAY Special!"
+            "name": "Full Face CO2 Laser",
+            "description": "Comprehensive facial CO2 laser resurfacing for acne scars, wrinkles, and skin rejuvenation."
           },
           "price": "395",
-          "priceCurrency": "GBP",
-          "priceValidUntil": "2024-11-30"
+          "priceCurrency": "GBP"
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "3 Treatment Package - BLACK FRIDAY",
+            "name": "3 Treatment Package",
             "description": "Best value! Three full face CO2 laser treatments. Save £385!"
           },
           "price": "800",
-          "priceCurrency": "GBP",
-          "priceValidUntil": "2024-11-30"
+          "priceCurrency": "GBP"
         }
       ]
     },
@@ -262,18 +260,16 @@ export default function StructuredData() {
         },
         {
           "@type": "Offer",
-          "name": "Full Face CO2 Laser - BLACK FRIDAY",
+          "name": "Full Face CO2 Laser",
           "price": "395",
           "priceCurrency": "GBP",
-          "priceValidUntil": "2024-11-30",
-          "description": "Comprehensive facial CO2 laser resurfacing for acne scars, wrinkles, and skin rejuvenation. BLACK FRIDAY Special!"
+          "description": "Comprehensive facial CO2 laser resurfacing for acne scars, wrinkles, and skin rejuvenation."
         },
         {
           "@type": "Offer",
-          "name": "3 Treatment Package - BLACK FRIDAY",
+          "name": "3 Treatment Package",
           "price": "800",
           "priceCurrency": "GBP",
-          "priceValidUntil": "2024-11-30",
           "description": "Best value! Three full face CO2 laser treatments. Save £385!"
         }
       ]

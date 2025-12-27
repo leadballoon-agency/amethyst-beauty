@@ -9,18 +9,18 @@ export default function PremiumTreatments({ onBookingClick }: PremiumTreatmentsP
     {
       icon: '✨',
       title: 'Single Treatment',
-      description: 'BLACK FRIDAY - One full treatment',
+      description: 'Special Offer - One full treatment',
       features: ['Full face CO2 laser', 'Acne scars & wrinkles', '3-5 days downtime', 'Klarna available'],
       price: '£395',
       oldPrice: '£499',
       gradient: 'from-primary-400 to-primary-600',
       popular: false,
-      badge: 'BLACK FRIDAY'
+      badge: 'SPECIAL OFFER'
     },
     {
       icon: '🔥',
       title: '3 Treatments Package',
-      description: 'BLACK FRIDAY - Best value deal',
+      description: 'Best value deal',
       features: ['3 full face treatments', 'Maximum results', 'SAVE £385', 'Klarna available'],
       price: '£800',
       oldPrice: '£1,497',

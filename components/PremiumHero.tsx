@@ -22,9 +22,9 @@ export default function PremiumHero({ onBookingClick, onVideoClick }: PremiumHer
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-5 sm:space-y-6 lg:space-y-8 animate-slide-up text-center lg:text-left">
-            {/* BLACK FRIDAY Badge */}
-            <div className="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-red-500 to-red-600 rounded-full mx-auto lg:mx-0 shadow-lg animate-pulse">
-              <span className="text-white font-bold text-sm sm:text-base">⚡ BLACK FRIDAY ⚡</span>
+            {/* Special Offer Badge */}
+            <div className="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full mx-auto lg:mx-0 shadow-lg animate-pulse">
+              <span className="text-white font-bold text-sm sm:text-base">⚡ SPECIAL OFFER ⚡</span>
             </div>
 
             {/* Main Heading */}
@@ -37,9 +37,9 @@ export default function PremiumHero({ onBookingClick, onVideoClick }: PremiumHer
               Celebrity endorsed CO2 RF Laser delivers amazing results without surgery. Stimulates collagen for firmer, tighter skin. Say goodbye to lines, wrinkles, sun spots, scarring and sagging skin!
             </p>
 
-            {/* BLACK FRIDAY Offer Box */}
-            <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-500 rounded-2xl p-5 sm:p-6 mx-auto lg:mx-0 max-w-xl shadow-lg">
-              <p className="text-red-600 font-bold text-xs sm:text-base mb-3">BLACK FRIDAY SPECIAL - Ends This Month!</p>
+            {/* Special Offer Box */}
+            <div className="bg-gradient-to-r from-primary-50 to-primary-100 border-2 border-primary-500 rounded-2xl p-5 sm:p-6 mx-auto lg:mx-0 max-w-xl shadow-lg">
+              <p className="text-primary-600 font-bold text-xs sm:text-base mb-3">LIMITED TIME OFFER</p>
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="text-center bg-white rounded-xl p-3 sm:p-4 shadow-sm">
                   <p className="text-2xl sm:text-4xl font-bold text-red-600 mb-1">£395</p>
@@ -173,7 +173,7 @@ export default function PremiumHero({ onBookingClick, onVideoClick }: PremiumHer
       </div>
 
       {/* Scroll Indicator - Visible on all devices */}
-      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 flex justify-center animate-bounce">
         <div className="flex flex-col items-center">
           <span className="text-xs text-neutral-500 mb-2">Scroll to explore</span>
           <svg className="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
