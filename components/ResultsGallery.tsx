@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import ModelDayModal from './ModelDayModal'
 
 interface ResultsGalleryProps {
   onBookingClick?: () => void
@@ -8,6 +9,7 @@ interface ResultsGalleryProps {
 
 export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const [showModelDayModal, setShowModelDayModal] = useState(false)
 
   const results: Array<{
     image: string
@@ -17,6 +19,7 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
     isAvailable: boolean
     featured: boolean
     isAward?: boolean
+    isModelDay?: boolean
   }> = [
     {
       image: '/images/co2laser-skin-rejeuvenation.jpeg',
@@ -69,11 +72,12 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
     },
     {
       image: '/images/model-day-tile.svg',
-      title: 'Book a Consultation',
-      description: 'See your transformation - schedule your free consultation',
-      time: 'Book Now',
+      title: 'Model Day',
+      description: 'Apply to be a model - discounts may be available based on our portfolio needs',
+      time: 'Apply Now',
       isAvailable: true,
-      featured: false
+      featured: false,
+      isModelDay: true
     }
   ]
 
@@ -98,17 +102,36 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
               key={index}
               className={`group relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-premium transition-all duration-300 ${
                 result.isAvailable ? 'sm:hover:shadow-premium-lg cursor-pointer' : 'opacity-90 cursor-not-allowed'
-              } ${result.featured ? 'md:col-span-2' : ''} ${result.isAward ? 'ring-2 ring-amber-400/50' : ''}`}
-              onClick={() => result.isAvailable && setSelectedImage(index)}
+              } ${result.featured ? 'md:col-span-2' : ''} ${result.isAward ? 'ring-2 ring-amber-400/50' : ''} ${result.isModelDay ? 'ring-2 ring-primary-400/50' : ''}`}
+              onClick={() => {
+                if (!result.isAvailable) return
+                if (result.isModelDay) {
+                  setShowModelDayModal(true)
+                } else {
+                  setSelectedImage(index)
+                }
+              }}
             >
-              {/* Before/After Label - Only show for available results, not for awards */}
-              {result.isAvailable && !result.isAward && (
+              {/* Before/After Label - Only show for available results, not for awards or model day */}
+              {result.isAvailable && !result.isAward && !result.isModelDay && (
                 <div className="absolute top-2 sm:top-4 left-2 sm:left-4 z-10 flex gap-1.5 sm:gap-2">
                   <span className="bg-white/90 backdrop-blur px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium">
                     Before
                   </span>
                   <span className="bg-primary-500/90 backdrop-blur text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium">
                     After
+                  </span>
+                </div>
+              )}
+
+              {/* Model Day Badge */}
+              {result.isModelDay && (
+                <div className="absolute top-2 sm:top-4 left-2 sm:left-4 z-10">
+                  <span className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium flex items-center gap-1">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5 2a2 2 0 00-2 2v14l3.5-2 3.5 2 3.5-2 3.5 2V4a2 2 0 00-2-2H5zm2.5 3a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm6.207.293a1 1 0 00-1.414 0l-6 6a1 1 0 101.414 1.414l6-6a1 1 0 000-1.414zM12.5 10a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" clipRule="evenodd" />
+                    </svg>
+                    Special Offer
                   </span>
                 </div>
               )}
@@ -152,7 +175,7 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
                 <p className="text-xs sm:text-sm lg:text-base text-neutral-600">{result.description}</p>
                 
                 <div className="mt-3 sm:mt-4 flex items-center text-primary-600 font-medium text-sm">
-                  <span>View Details</span>
+                  <span>{result.isModelDay ? 'Learn More' : 'View Details'}</span>
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-1.5 sm:ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                   </svg>
@@ -232,6 +255,12 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
             </div>
           </div>
         )}
+
+        {/* Model Day Modal */}
+        <ModelDayModal
+          isOpen={showModelDayModal}
+          onClose={() => setShowModelDayModal(false)}
+        />
       </div>
     </section>
   )
