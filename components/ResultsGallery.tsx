@@ -63,8 +63,8 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
     },
     {
       image: '/images/award-finalist-2025.avif',
-      title: 'Award-Winning Excellence',
-      description: 'Marianne - Professional Beauty Awards Finalist 2025',
+      title: 'Best Salon Team',
+      description: 'Marianne and Amethyst Beauty, 2025 finalist, South Petherton',
       time: 'Recognised',
       isAvailable: true,
       featured: false,

@@ -8,6 +8,7 @@ interface NavigationProps {
 
 const links = [
   { label: 'About', href: '#about' },
+  { label: 'Awards', href: '#awards' },
   { label: 'Treatments', href: '#treatments' },
   { label: 'Results', href: '#results' },
   { label: 'Reviews', href: '#reviews' },

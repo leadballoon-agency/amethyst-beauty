@@ -14,7 +14,7 @@ export default function FinanceSection({ onBookingClick }: FinanceSectionProps) 
             <span className="block text-gold-deep">with Klarna</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-neutral-600 mt-2 sm:mt-4 max-w-2xl mx-auto px-4">
-            Pay in 3 interest-free instalments • No hidden fees • Instant approval
+            Marianne accepts Klarna. Pay in 3 interest-free instalments, with no hidden fees.
           </p>
         </div>
 

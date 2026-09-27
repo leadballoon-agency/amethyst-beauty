@@ -45,13 +45,40 @@ export default function AboutSection({ onBookingClick }: AboutSectionProps) {
               Marianne is the founder of Amethyst Aesthetics Beauty. She has completed more than 800 treatments, including CO2 laser resurfacing for acne scars and skin texture. You meet her at the clinic on Unit 2, New Cross Hill, South Petherton.
             </p>
             <ul className="mt-6 space-y-2 text-sm text-ink">
-              {['Advanced CO2 laser specialist', '800+ treatments completed', 'Award-finalist clinic', '4+ years in aesthetics'].map((item) => (
+              {['Advanced CO2 laser specialist', '800+ treatments completed', '2025 Best Salon Team finalist', '4+ years in aesthetics'].map((item) => (
                 <li key={item} className="border-b border-line py-2">{item}</li>
               ))}
             </ul>
             <button onClick={onBookingClick} className="btn-secondary mt-8">
               Book consultation
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="awards" className="py-16 sm:py-24 bg-surface">
+        <div className="max-w-6xl mx-auto section-padding grid lg:grid-cols-2 gap-10 items-center">
+          <div className="border border-line bg-surface-raised p-8 sm:p-10 flex justify-center">
+            <img
+              src="/images/award-finalist-2025.avif"
+              alt="2025 finalist certificate: Best Salon Team, Amethyst Beauty, South Petherton"
+              className="h-72 sm:h-96 w-auto"
+            />
+          </div>
+          <div>
+            <p className="eyebrow">Awards</p>
+            <h2 className="font-display text-4xl sm:text-5xl text-ink mt-3">
+              Best Salon Team
+              <span className="block text-gold-deep">2025 finalist</span>
+            </h2>
+            <p className="text-ink-muted text-base sm:text-lg leading-relaxed mt-6">
+              Marianne and Amethyst Beauty in South Petherton were named a 2025 finalist for Best Salon Team.
+            </p>
+            <ul className="mt-6 space-y-2 text-sm text-ink">
+              <li className="border-b border-line py-2">Best Salon Team — 2025 finalist</li>
+              <li className="border-b border-line py-2">Amethyst Beauty, South Petherton</li>
+              <li className="border-b border-line py-2">Certificate of recognition</li>
+            </ul>
           </div>
         </div>
       </section>

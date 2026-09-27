@@ -11,6 +11,14 @@ export default function Footer() {
             />
             <p className="text-gold-gilt">CO2 laser skin resurfacing</p>
             <p className="text-ink-inverse/70 mt-2 text-sm">South Petherton, Somerset</p>
+            <div className="mt-5 inline-flex items-center gap-3 bg-white px-3 py-2">
+              <img
+                src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg"
+                alt="Klarna"
+                className="h-5"
+              />
+              <span className="text-xs text-ink uppercase tracking-[0.12em]">Accepted</span>
+            </div>
           </div>
 
           <div>
@@ -29,6 +37,8 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-ink-inverse/80">
               <li><a href="#about" className="hover:text-gold-gilt">About</a></li>
               <li><a href="#practitioner" className="hover:text-gold-gilt">Marianne</a></li>
+              <li><a href="#awards" className="hover:text-gold-gilt">Awards</a></li>
+              <li><a href="#finance" className="hover:text-gold-gilt">Pay with Klarna</a></li>
               <li><a href="#treatments" className="hover:text-gold-gilt">Treatments</a></li>
               <li><a href="#results" className="hover:text-gold-gilt">Results</a></li>
               <li><a href="#reviews" className="hover:text-gold-gilt">Reviews</a></li>

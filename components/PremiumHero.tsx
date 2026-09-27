@@ -47,7 +47,14 @@ export default function PremiumHero({ onBookingClick, onVideoClick }: PremiumHer
                   <p className="text-xs text-gold-pale mt-1 uppercase tracking-[0.12em]">Save £385</p>
                 </div>
               </div>
-              <p className="text-xs sm:text-sm text-ink-muted mt-3 text-center">Klarna available · 3–5 days downtime</p>
+              <div className="mt-4 flex items-center justify-center gap-3">
+                <img
+                  src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg"
+                  alt="Klarna"
+                  className="h-6"
+                />
+                <p className="text-xs sm:text-sm text-ink-muted">Pay in 3 with Klarna · 3–5 days downtime</p>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
