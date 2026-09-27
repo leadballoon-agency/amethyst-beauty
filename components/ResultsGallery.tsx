@@ -63,8 +63,8 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
     },
     {
       image: '/images/award-finalist-2025.avif',
-      title: 'Award-Winning Excellence',
-      description: 'Marianne - Professional Beauty Awards Finalist 2025',
+      title: 'Best Salon Team',
+      description: 'Marianne and Amethyst Beauty, 2025 finalist, South Petherton',
       time: 'Recognised',
       isAvailable: true,
       featured: false,
@@ -82,13 +82,13 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
   ]
 
   return (
-    <section id="results" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-primary-50 to-white">
+    <section id="results" className="py-16 sm:py-24 bg-surface-alt border-y border-line">
       <div className="max-w-7xl mx-auto section-padding">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">Real Results</span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-4">
-            Transformations That
-            <span className="block gradient-text">Speak For Themselves</span>
+          <p className="eyebrow">Real results</p>
+          <h2 className="font-display text-4xl sm:text-5xl text-ink mt-3">
+            CO2 laser
+            <span className="block text-gold-deep">before and after</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-neutral-600 mt-2 sm:mt-4 max-w-2xl mx-auto px-4">
             Browse our gallery of real patient results

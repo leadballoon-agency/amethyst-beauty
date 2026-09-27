@@ -1,12 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Suspense } from 'react'
 import './globals.css'
 import StructuredData from '@/components/StructuredData'
 import FacebookPixel from '@/components/FacebookPixel'
-import ConvertBox from '@/components/ConvertBox'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-cormorant',
+})
 
 export const metadata: Metadata = {
   title: 'CO2 Laser Treatment Somerset £395 - Expert Skin Resurfacing | Amethyst Aesthetics Beauty',
@@ -74,11 +78,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className={`${inter.variable} ${cormorant.variable}`}>
       <body className={inter.className}>
         <Suspense fallback={null}>
           <FacebookPixel />
-          <ConvertBox />
         </Suspense>
         <StructuredData />
         {children}

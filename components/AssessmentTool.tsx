@@ -168,16 +168,13 @@ export default function AssessmentTool({ onBookingClick, onAssessmentComplete }:
   }
 
   return (
-    <section id="assessment" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-primary-50">
+    <section id="assessment" className="py-16 sm:py-24 bg-surface border-b border-line">
       <div className="max-w-4xl mx-auto section-padding">
         <div className="text-center mb-8 sm:mb-12">
-          <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-primary-100 to-primary-200 rounded-full mb-3">
-            <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse mr-2"></span>
-            <span className="text-primary-700 font-medium text-xs sm:text-sm">AI-Powered Assessment</span>
-          </div>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
-            Find Your Perfect
-            <span className="gradient-text"> Treatment</span>
+          <p className="eyebrow">Treatment finder</p>
+          <h2 className="font-display text-4xl sm:text-5xl text-ink mt-3 mb-3">
+            Find your right
+            <span className="text-gold-deep"> CO2 treatment</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-neutral-600 max-w-2xl mx-auto px-4">
             Answer 3 quick questions for personalized recommendations

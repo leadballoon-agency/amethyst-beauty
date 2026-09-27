@@ -37,13 +37,13 @@ export default function FAQ({ onBookingClick }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-primary-50">
+    <section id="faq" className="py-16 sm:py-24 bg-surface">
       <div className="max-w-4xl mx-auto section-padding">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">FAQ</span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-4">
-            Your Questions
-            <span className="block gradient-text">Answered</span>
+        <div className="text-center mb-12">
+          <p className="eyebrow">Questions answered</p>
+          <h2 className="font-display text-4xl sm:text-5xl text-ink mt-3">
+            Frequently asked
+            <span className="block text-gold-deep">questions</span>
           </h2>
         </div>
 
@@ -51,17 +51,17 @@ export default function FAQ({ onBookingClick }: FAQProps) {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden transition-all duration-300"
+              className="bg-surface-raised border border-line overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex justify-between items-center hover:bg-primary-50 transition-colors"
+                className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex justify-between items-center hover:bg-surface-alt transition-colors"
               >
                 <span className="font-semibold text-sm sm:text-base lg:text-lg pr-3 sm:pr-4">{faq.question}</span>
-                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 flex items-center justify-center flex-shrink-0 transition-transform ${
+                <div className={`w-7 h-7 sm:w-8 sm:h-8 border border-gold text-gold-deep flex items-center justify-center flex-shrink-0 transition-transform ${
                   openIndex === index ? 'rotate-180' : ''
                 }`}>
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </div>
@@ -84,9 +84,9 @@ export default function FAQ({ onBookingClick }: FAQProps) {
           </p>
           <button 
             onClick={onBookingClick}
-            className="inline-flex items-center bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base lg:text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
+            className="btn-primary"
           >
-            Get in Touch
+            Book consultation
           </button>
         </div>
       </div>

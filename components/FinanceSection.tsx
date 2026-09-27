@@ -4,17 +4,17 @@ interface FinanceSectionProps {
 
 export default function FinanceSection({ onBookingClick }: FinanceSectionProps) {
   return (
-    <section id="finance" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-primary-50">
+    <section id="finance" className="py-16 sm:py-24 bg-surface-alt">
       <div className="max-w-7xl mx-auto section-padding">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
-          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">Flexible Payment Options</span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-4">
-            Spread the Cost
-            <span className="block gradient-text">with Klarna</span>
+          <p className="eyebrow">Flexible payment</p>
+          <h2 className="font-display text-4xl sm:text-5xl text-ink mt-3">
+            Spread the cost
+            <span className="block text-gold-deep">with Klarna</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-neutral-600 mt-2 sm:mt-4 max-w-2xl mx-auto px-4">
-            Pay in 3 interest-free instalments • No hidden fees • Instant approval
+            Marianne accepts Klarna. Pay in 3 interest-free instalments, with no hidden fees.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export default function FinanceSection({ onBookingClick }: FinanceSectionProps) 
           <div className="text-center">
             <button
               onClick={onBookingClick}
-              className="inline-flex items-center bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full font-medium text-base sm:text-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="btn-primary"
             >
               Book Your Treatment
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

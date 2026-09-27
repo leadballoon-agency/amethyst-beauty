@@ -64,13 +64,13 @@ export default function Reviews() {
   ]
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-white">
+    <section id="reviews" className="py-16 sm:py-24 bg-surface">
       <div className="max-w-7xl mx-auto section-padding">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">Patient Reviews</span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-4">
-            What Our Patients
-            <span className="block gradient-text">Are Saying</span>
+          <p className="eyebrow">Client stories</p>
+          <h2 className="font-display text-4xl sm:text-5xl text-ink mt-3">
+            What clients say
+            <span className="block text-gold-deep">about Amethyst</span>
           </h2>
 
           {/* Overall Rating */}

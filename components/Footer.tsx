@@ -1,68 +1,61 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
+    <footer className="bg-surface-inverse text-ink-inverse py-14">
+      <div className="max-w-7xl mx-auto section-padding">
+        <div className="grid md:grid-cols-3 gap-10">
           <div>
             <img
               src="/images/amethyst-logo.avif"
               alt="Amethyst Aesthetics Beauty"
-              className="h-16 w-auto mb-4"
+              className="h-14 w-auto mb-4 brightness-0 invert"
             />
-            <p className="text-gray-400">
-              Expert CO2 laser treatments in Somerset
-            </p>
-            <p className="text-gray-400 mt-2 text-sm">
-              Award-finalist beauty salon serving South Petherton & Yeovil
-            </p>
-            <div className="mt-4 pt-4 border-t border-gray-800">
+            <p className="text-gold-gilt">CO2 laser skin resurfacing</p>
+            <p className="text-ink-inverse/70 mt-2 text-sm">South Petherton, Somerset</p>
+            <div className="mt-5 inline-flex items-center gap-3 bg-white px-3 py-2">
               <img
-                src="/images/award-finalist-2025.avif"
-                alt="Award-Finalist Beauty Salon 2025"
-                className="h-20 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                src="https://x.klarnacdn.net/payment-method/assets/badges/generic/klarna.svg"
+                alt="Klarna"
+                className="h-5"
               />
+              <span className="text-xs text-ink uppercase tracking-[0.12em]">Accepted</span>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <a href="tel:+447366904007" className="hover:text-white">
-                  07366 904007
-                </a>
-              </li>
-              <li>
-                <a href="mailto:Ismaymarianne@gmail.com" className="hover:text-white">
-                  Ismaymarianne@gmail.com
-                </a>
-              </li>
-              <li className="mt-3 pt-3 border-t border-gray-800">Unit 2, Old Apple Store</li>
-              <li>New Cross Hill</li>
-              <li>South Petherton, TA13 5HV</li>
-              <li>Somerset, United Kingdom</li>
+            <h3 className="uppercase tracking-[0.16em] text-xs text-gold-gilt mb-4">Contact</h3>
+            <ul className="space-y-2 text-sm text-ink-inverse/80">
+              <li><a href="tel:+447366904007" className="hover:text-gold-gilt">07366 904007</a></li>
+              <li><a href="mailto:Ismaymarianne@gmail.com" className="hover:text-gold-gilt">Ismaymarianne@gmail.com</a></li>
+              <li className="pt-3">Amethyst Aesthetics Beauty</li>
+              <li>Unit 2, New Cross Hill</li>
+              <li>South Petherton, TA13 5HZ</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#about" className="hover:text-white">About</a></li>
-              <li><a href="#treatments" className="hover:text-white">Treatments</a></li>
-              <li><a href="#results" className="hover:text-white">Results</a></li>
-              <li><a href="#contact" className="hover:text-white">Contact</a></li>
-              <li><a href="https://www.amethystaestheticsbeauty.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Main Website</a></li>
+            <h3 className="uppercase tracking-[0.16em] text-xs text-gold-gilt mb-4">Quick links</h3>
+            <ul className="space-y-2 text-sm text-ink-inverse/80">
+              <li><a href="#about" className="hover:text-gold-gilt">About</a></li>
+              <li><a href="#practitioner" className="hover:text-gold-gilt">Marianne</a></li>
+              <li><a href="#awards" className="hover:text-gold-gilt">Awards</a></li>
+              <li><a href="#finance" className="hover:text-gold-gilt">Pay with Klarna</a></li>
+              <li><a href="#treatments" className="hover:text-gold-gilt">Treatments</a></li>
+              <li><a href="#results" className="hover:text-gold-gilt">Results</a></li>
+              <li><a href="#reviews" className="hover:text-gold-gilt">Reviews</a></li>
+              <li><a href="#assessment" className="hover:text-gold-gilt">Check suitability</a></li>
+              <li><a href="#faq" className="hover:text-gold-gilt">FAQ</a></li>
+              <li><a href="https://www.amethystaestheticsbeauty.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gold-gilt">Main website</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p className="mb-2">&copy; 2024 Amethyst Aesthetics Beauty. All rights reserved.</p>
-          <p className="text-xs text-gray-500 mb-3">
-            <a href="/privacy-policy" className="hover:text-white underline">Privacy Policy</a>
+        <div className="border-t border-white/15 mt-10 pt-6 text-sm text-ink-inverse/60">
+          <p>&copy; {new Date().getFullYear()} Amethyst Aesthetics Beauty. All rights reserved.</p>
+          <p className="mt-2">
+            <a href="/privacy-policy" className="hover:text-gold-gilt underline">Privacy Policy</a>
           </p>
-          <p className="text-xs text-gray-500">
-            This site may use Meta tracking technologies to improve user experience and analyze site performance.
+          <p className="mt-2 text-xs">
+            This site may use Meta tracking technologies to improve user experience and analyse site performance.
           </p>
         </div>
       </div>
