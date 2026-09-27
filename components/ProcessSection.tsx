@@ -35,7 +35,7 @@ export default function ProcessSection({ onBookingClick }: ProcessSectionProps) 
   ]
 
   return (
-    <section id="process" className="py-12 sm:py-16 md:py-24 bg-white relative overflow-hidden">
+    <section id="how-it-works" className="py-16 sm:py-24 bg-surface relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div 
           className="absolute inset-0" 
@@ -48,10 +48,10 @@ export default function ProcessSection({ onBookingClick }: ProcessSectionProps) 
 
       <div className="max-w-7xl mx-auto section-padding relative z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">The Journey</span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-4">
-            Your Treatment
-            <span className="block gradient-text">Process</span>
+          <p className="eyebrow">The process</p>
+          <h2 className="font-display text-4xl sm:text-5xl text-ink mt-3">
+            How CO2 laser
+            <span className="block text-gold-deep">works</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-neutral-600 mt-2 sm:mt-4 max-w-2xl mx-auto px-4">
             Safe, professional process with patch testing before your treatment

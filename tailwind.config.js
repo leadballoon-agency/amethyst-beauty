@@ -8,33 +8,57 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ink: {
+          DEFAULT: '#22201d',
+          muted: '#6b635a',
+          inverse: '#f5efe6',
+        },
+        gold: {
+          DEFAULT: '#b08d57',
+          deep: '#6f5430',
+          display: '#9a7842',
+          gilt: '#d4b27c',
+          pale: '#d8c6a8',
+          link: '#8a6a3b',
+          mark: '#c9a66f',
+        },
+        surface: {
+          DEFAULT: '#f7f3ee',
+          alt: '#f0e9e3',
+          raised: '#fbf8f3',
+          inverse: '#1c1917',
+        },
+        line: {
+          DEFAULT: '#e3d9ca',
+          strong: '#c9b893',
+        },
         primary: {
-          50: '#faf5f9',
-          100: '#f3e5f1',
-          200: '#e6cce3',
-          300: '#d399cc',
-          400: '#b055a0',
-          500: '#8c2171',
-          600: '#701a5a',
-          700: '#541444',
-          800: '#380d2d',
+          50: '#f7f3ee',
+          100: '#f0e9e3',
+          200: '#e3d9ca',
+          300: '#d8c6a8',
+          400: '#c9a66f',
+          500: '#b08d57',
+          600: '#8a6a3b',
+          700: '#6f5430',
+          800: '#22201d',
         },
         neutral: {
-          50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
-          400: '#a3a3a3',
-          500: '#737373',
+          50: '#fbf8f3',
+          100: '#f7f3ee',
+          200: '#e3d9ca',
+          300: '#d8c6a8',
+          400: '#a3988c',
+          500: '#6b635a',
           600: '#525252',
-          700: '#404040',
+          700: '#3a342e',
           800: '#262626',
-          900: '#171717',
+          900: '#1c1917',
         }
       },
       fontFamily: {
-        'display': ['Playfair Display', 'serif'],
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        display: ['var(--font-cormorant)', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -57,8 +81,8 @@ module.exports = {
         }
       },
       boxShadow: {
-        'premium': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-        'premium-lg': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+        'premium': '0 20px 25px -5px rgba(34, 32, 29, 0.08), 0 10px 10px -5px rgba(34, 32, 29, 0.04)',
+        'premium-lg': '0 25px 50px -12px rgba(34, 32, 29, 0.18)',
       }
     },
   },

@@ -90,7 +90,7 @@ export default function PageWrapper() {
           setAssessmentData({ skipToCalendar: true })
           setIsBookingModalOpen(true)
         }}
-        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-full font-medium shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 flex items-center group"
+        className="fixed bottom-6 right-6 z-40 bg-ink text-surface-raised px-6 py-3 rounded-sm font-semibold uppercase tracking-[0.08em] text-sm shadow-premium hover:bg-gold-link transition-colors duration-200 flex items-center group"
       >
         <span className="mr-2">Book Now</span>
         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
